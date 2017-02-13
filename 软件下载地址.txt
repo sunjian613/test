@@ -1,0 +1,7 @@
+参考下载地址
+
+Mindjet Manager：
+地址：http://www.mindmanager.cc/xiazai.html
+
+蓝灯：
+https://s3.amazonaws.com/lantern/lantern-installer.exe

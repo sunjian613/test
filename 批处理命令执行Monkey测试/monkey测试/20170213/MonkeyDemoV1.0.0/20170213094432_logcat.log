@@ -1,0 +1,89 @@
+--------- beginning of main
+02-13 01:44:34.421  3321  3321 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+02-13 01:44:34.422  3321  3321 D AndroidRuntime: CheckJNI is ON
+02-13 01:44:34.446  3321  3321 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+02-13 01:44:34.478  3321  3321 E memtrack: Couldn't load memtrack module (No such file or directory)
+02-13 01:44:34.478  3321  3321 E android.os.Debug: failed to load memtrack module: -2
+02-13 01:44:34.479  3321  3321 I Radio-JNI: register_android_hardware_Radio DONE
+02-13 01:44:34.490  3321  3321 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+--------- beginning of system
+02-13 01:44:34.492  1533  1765 I ActivityManager: Force stopping com.feicuiedu.monkeydemo appid=10071 user=0: from pid 3321
+02-13 01:44:34.493  1533  1765 I ActivityManager: Killing 2800:com.feicuiedu.monkeydemo/u0a71 (adj 0): stop com.feicuiedu.monkeydemo
+02-13 01:44:34.541  1533  2158 I WindowState: WIN DEATH: Window{dd376ff u0 com.feicuiedu.monkeydemo/com.feicuiedu.monkeydemo.TestActivity}
+02-13 01:44:34.543  1533  1944 D GraphicsStats: Buffer count: 5
+02-13 01:44:34.550  1533  1765 W ActivityManager: Force removing ActivityRecord{fac8e88 u0 com.feicuiedu.monkeydemo/.TestActivity t444}: app died, no saved state
+02-13 01:44:34.700  3321  3321 D AndroidRuntime: Shutting down VM
+02-13 01:44:34.700  1533  2115 W art     : Long monitor contention event with owner method=void com.android.server.am.ActivityManagerService.forceStopPackage(java.lang.String, int) from ActivityManagerService.java:5254 waiters=1 for 159ms
+02-13 01:44:34.700  1533  2115 W ActivityManager: Spurious death for ProcessRecord{7d860df 0:com.feicuiedu.monkeydemo/u0a71}, curProc for 2800: null
+02-13 01:44:34.700  1533  1544 W art     : Long monitor contention event with owner method=void com.android.server.am.ActivityManagerService.forceStopPackage(java.lang.String, int) from ActivityManagerService.java:5254 waiters=2 for 152ms
+02-13 01:44:35.076  1533  2070 W InputMethodManagerService: Got RemoteException sending setActive(false) notification to pid 2800 uid 10071
+02-13 01:44:35.367  1851  2838 E Surface : getSlotFromBufferLocked: unknown buffer: 0xaa3edb00
+02-13 01:44:35.620  1900  1900 I Choreographer: Skipped 30 frames!  The application may be doing too much work on its main thread.
+02-13 01:44:36.004  3331  3331 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+02-13 01:44:36.005  3331  3331 D AndroidRuntime: CheckJNI is ON
+02-13 01:44:36.030  3331  3331 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+02-13 01:44:36.075  3331  3331 E memtrack: Couldn't load memtrack module (No such file or directory)
+02-13 01:44:36.075  3331  3331 E android.os.Debug: failed to load memtrack module: -2
+02-13 01:44:36.077  3331  3331 I Radio-JNI: register_android_hardware_Radio DONE
+02-13 01:44:36.088  3331  3331 D AndroidRuntime: Calling main entry com.android.commands.monkey.Monkey
+02-13 01:44:36.117  1533  1547 W BroadcastQueue: Skipping deliver [background] BroadcastRecord{9c30ad u-1 android.net.conn.CONNECTIVITY_CHANGE} to ReceiverList{c239fe2 3331 (unknown name)/0/u-1 remote:de78cd7}: process crashing
+02-13 01:44:36.144  1533  1774 I ActivityManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.feicuiedu.monkeydemo/.TestActivity} from uid 0 on display 0
+02-13 01:44:36.367  3340  3340 I art     : Not late-enabling -Xcheck:jni (already on)
+02-13 01:44:36.372  1533  2151 I ActivityManager: Start proc 3340:com.feicuiedu.monkeydemo/u0a71 for activity com.feicuiedu.monkeydemo/.TestActivity
+02-13 01:44:36.472  1533  1554 D         : HostConnection::get() New Host Connection established 0x9be6cf20, tid 1554
+02-13 01:44:36.612  3340  3340 W System  : ClassLoader referenced unknown path: /data/app/com.feicuiedu.monkeydemo-1/lib/x86
+02-13 01:44:36.618  3340  3340 I InstantRun: Instant Run Runtime started. Android package is com.feicuiedu.monkeydemo, real application class is null.
+02-13 01:44:36.978  3340  3340 W System  : ClassLoader referenced unknown path: /data/app/com.feicuiedu.monkeydemo-1/lib/x86
+02-13 01:44:37.045  1900  2117 E Surface : getSlotFromBufferLocked: unknown buffer: 0xae6027e0
+02-13 01:44:37.232  3340  3340 W art     : Before Android 4.1, method android.graphics.PorterDuffColorFilter android.support.graphics.drawable.VectorDrawableCompat.updateTintFilter(android.graphics.PorterDuffColorFilter, android.content.res.ColorStateList, android.graphics.PorterDuff$Mode) would have incorrectly overridden the package-private method in android.graphics.drawable.Drawable
+02-13 01:44:37.884  1189  1578 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+02-13 01:44:37.904  3340  3354 D OpenGLRenderer: Use EGL_SWAP_BEHAVIOR_PRESERVED: true
+02-13 01:44:37.940  3340  3340 D         : HostConnection::get() New Host Connection established 0xaaa2af50, tid 3340
+02-13 01:44:38.055  3340  3354 D         : HostConnection::get() New Host Connection established 0xaaa2afe0, tid 3354
+02-13 01:44:38.069  3340  3354 I OpenGLRenderer: Initialized EGL, version 1.4
+02-13 01:44:38.229  3340  3340 W ViewRootImpl: Dropping event due to no window focus: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_DPAD_UP, scanCode=0, metaState=0, flags=0x8, repeatCount=0, eventTime=1444804, downTime=1444804, deviceId=-1, source=0x101 }
+02-13 01:44:38.265  3340  3340 W ViewRootImpl: Cancelling event due to no window focus: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_DPAD_UP, scanCode=0, metaState=0, flags=0x28, repeatCount=0, eventTime=1446479, downTime=1446479, deviceId=-1, source=0x101 }
+02-13 01:44:38.265  3340  3340 W ViewRootImpl: Cancelling event due to no window focus: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_DPAD_UP, scanCode=0, metaState=0, flags=0x28, repeatCount=0, eventTime=1446479, downTime=1446479, deviceId=-1, source=0x101 }
+02-13 01:44:38.265  3340  3340 W ViewRootImpl: Cancelling event due to no window focus: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_DPAD_UP, scanCode=0, metaState=0, flags=0x28, repeatCount=0, eventTime=1446479, downTime=1446479, deviceId=-1, source=0x101 }
+02-13 01:44:38.265  3340  3340 W ViewRootImpl: Cancelling event due to no window focus: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_DPAD_UP, scanCode=0, metaState=0, flags=0x28, repeatCount=0, eventTime=1446479, downTime=1446479, deviceId=-1, source=0x101 }
+02-13 01:44:38.265  3340  3340 W ViewRootImpl: Cancelling event due to no window focus: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_DPAD_UP, scanCode=0, metaState=0, flags=0x28, repeatCount=0, eventTime=1446479, downTime=1446479, deviceId=-1, source=0x101 }
+02-13 01:44:38.265  3340  3340 W ViewRootImpl: Cancelling event due to no window focus: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_DPAD_UP, scanCode=0, metaState=0, flags=0x28, repeatCount=0, eventTime=1446479, downTime=1446479, deviceId=-1, source=0x101 }
+02-13 01:44:38.266  3340  3340 W ViewRootImpl: Cancelling event due to no window focus: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_DPAD_UP, scanCode=0, metaState=0, flags=0x28, repeatCount=0, eventTime=1446479, downTime=1446479, deviceId=-1, source=0x101 }
+02-13 01:44:38.267  3340  3340 W ViewRootImpl: Cancelling event due to no window focus: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_DPAD_UP, scanCode=0, metaState=0, flags=0x28, repeatCount=0, eventTime=1446479, downTime=1446479, deviceId=-1, source=0x101 }
+02-13 01:44:38.267  3340  3340 W ViewRootImpl: Cancelling event due to no window focus: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_DPAD_UP, scanCode=0, metaState=0, flags=0x28, repeatCount=0, eventTime=1446479, downTime=1446479, deviceId=-1, source=0x101 }
+02-13 01:44:38.361  3340  3340 W ViewRootImpl: Dropping event due to no window focus: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_DPAD_LEFT, scanCode=0, metaState=0, flags=0x8, repeatCount=0, eventTime=1446677, downTime=1446677, deviceId=-1, source=0x101 }
+02-13 01:44:38.362  3340  3340 W ViewRootImpl: Cancelling event due to no window focus: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_DPAD_LEFT, scanCode=0, metaState=0, flags=0x28, repeatCount=0, eventTime=1446712, downTime=1446712, deviceId=-1, source=0x101 }
+02-13 01:44:38.362  3340  3340 W ViewRootImpl: Cancelling event due to no window focus: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_DPAD_LEFT, scanCode=0, metaState=0, flags=0x28, repeatCount=0, eventTime=1446712, downTime=1446712, deviceId=-1, source=0x101 }
+02-13 01:44:38.362  3340  3340 W ViewRootImpl: Cancelling event due to no window focus: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_DPAD_LEFT, scanCode=0, metaState=0, flags=0x28, repeatCount=0, eventTime=1446712, downTime=1446712, deviceId=-1, source=0x101 }
+02-13 01:44:38.362  3340  3340 W ViewRootImpl: Cancelling event due to no window focus: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_DPAD_LEFT, scanCode=0, metaState=0, flags=0x28, repeatCount=0, eventTime=1446712, downTime=1446712, deviceId=-1, source=0x101 }
+02-13 01:44:38.362  3340  3340 W ViewRootImpl: Cancelling event due to no window focus: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_DPAD_LEFT, scanCode=0, metaState=0, flags=0x28, repeatCount=0, eventTime=1446712, downTime=1446712, deviceId=-1, source=0x101 }
+02-13 01:44:38.362  3340  3340 W ViewRootImpl: Cancelling event due to no window focus: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_DPAD_LEFT, scanCode=0, metaState=0, flags=0x28, repeatCount=0, eventTime=1446712, downTime=1446712, deviceId=-1, source=0x101 }
+02-13 01:44:38.362  3340  3340 W ViewRootImpl: Cancelling event due to no window focus: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_DPAD_LEFT, scanCode=0, metaState=0, flags=0x28, repeatCount=0, eventTime=1446712, downTime=1446712, deviceId=-1, source=0x101 }
+02-13 01:44:38.362  3340  3340 W ViewRootImpl: Cancelling event due to no window focus: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_DPAD_LEFT, scanCode=0, metaState=0, flags=0x28, repeatCount=0, eventTime=1446712, downTime=1446712, deviceId=-1, source=0x101 }
+02-13 01:44:38.362  3340  3340 W ViewRootImpl: Cancelling event due to no window focus: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_DPAD_LEFT, scanCode=0, metaState=0, flags=0x28, repeatCount=0, eventTime=1446712, downTime=1446712, deviceId=-1, source=0x101 }
+02-13 01:44:38.363  1533  1554 I ActivityManager: Displayed com.feicuiedu.monkeydemo/.TestActivity: +2s4ms
+02-13 01:44:38.613  3340  3340 W InputMethodManager: Ignoring onBind: cur seq=23, given seq=22
+02-13 01:44:38.803  1533  1554 D gralloc_ranchu: gralloc_unregister_buffer: exiting HostConnection (is buffer-handling thread)
+02-13 01:44:39.203  1533  1602 W AudioTrack: AUDIO_OUTPUT_FLAG_FAST denied by client; transfer 4, track 48000 Hz, output 44100 Hz
+02-13 01:44:39.260  1533  1576 I ActivityManager: START u0 {act=android.intent.action.SHOW_BRIGHTNESS_DIALOG cmp=com.android.systemui/.settings.BrightnessDialog} from uid 1000 on display 0
+02-13 01:44:39.274  1199  1585 D AudioFlinger: mixer(0xb44c0000) throttle end: throttle time(99)
+02-13 01:44:39.357  1533  1602 W AudioTrack: AUDIO_OUTPUT_FLAG_FAST denied by client; transfer 4, track 48000 Hz, output 44100 Hz
+02-13 01:44:39.458  1199  1585 D AudioFlinger: mixer(0xb44c0000) throttle end: throttle time(53)
+02-13 01:44:39.820  1851  1851 I LatinIME: Starting input. Cursor position = 0,0
+02-13 01:44:40.421  1199  1585 D AudioFlinger: mixer(0xb44c0000) throttle end: throttle time(17)
+02-13 01:44:41.340  3331  3331 I art     : System.exit called, status: 0
+02-13 01:44:41.340  3331  3331 I AndroidRuntime: VM exiting with result code 0.
+02-13 01:44:41.349  1851  1861 I art     : Background partial concurrent mark sweep GC freed 2034(113KB) AllocSpace objects, 0(0B) LOS objects, 39% free, 3MB/5MB, paused 25.167ms total 94.017ms
+02-13 01:44:41.912  1189  1248 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+02-13 01:44:41.940  3365  3365 D         : HostConnection::get() New Host Connection established 0xb654f1b0, tid 3365
+02-13 01:44:41.952  1189  1189 E EGL_emulation: tid 1189: eglCreateSyncKHR(1370): error 0x3004 (EGL_BAD_ATTRIBUTE)
+02-13 01:44:42.523  3370  3370 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+02-13 01:44:42.525  3370  3370 D AndroidRuntime: CheckJNI is ON
+02-13 01:44:42.567  3370  3370 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+02-13 01:44:42.592  3370  3370 E memtrack: Couldn't load memtrack module (No such file or directory)
+02-13 01:44:42.592  3370  3370 E android.os.Debug: failed to load memtrack module: -2
+02-13 01:44:42.593  3370  3370 I Radio-JNI: register_android_hardware_Radio DONE
+02-13 01:44:42.608  3370  3370 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+02-13 01:44:42.616  2098  2098 D MediaScannerReceiver: action: android.intent.action.MEDIA_SCANNER_SCAN_FILE path: /storage/emulated/0/monkey_run_end.png
+02-13 01:44:42.620  3370  3370 D AndroidRuntime: Shutting down VM
+02-13 01:44:42.833  3365  3365 D gralloc_ranchu: gralloc_unregister_buffer: exiting HostConnection (is buffer-handling thread)

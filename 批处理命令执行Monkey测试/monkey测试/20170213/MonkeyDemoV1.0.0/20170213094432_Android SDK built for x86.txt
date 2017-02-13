@@ -1,0 +1,4 @@
+Phone信息
+手机品牌: Android
+手机型号: Android SDK built for x86
+系统版本: Android 6.0

@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>单元测试</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1>单元测试</h1>
+<p>单元测试（模块测试）是开发者编写的一小段代码，用于检验被测代码的一个很小的、很明确的功能是否正确。通常而言，一个单元测试是用于判断某个特定条件（或者场景）下某个特定函数的行为。例如，你可能把一个很大的值放入一个有序list 中去，然后确认该值出现在list 的尾部。或者，你可能会从字符串中删除匹配某种模式的字符，然后确认字符串确实不再包含这些字符了。</p>
+<p>基于<code>JUnit</code> 来进行测试，包括运行在JVM上的本地单元测试，和运行在Android设备上的Instrumented测试。</p>
+<h2>JUnit</h2>
+<p>把单元测试或集成测试类写成JUnit 4测试类。此框架提供了便捷的方法来执行测试中常见的建立(setup)，拆除(teardown)和断言(assertion)操作。</p>
+<p>一个基本的JUnit 4测试类是一个包含一个或多个测试方法的Java类。测试方法应以@Test注解开始，并包含代码执行和验证单一的功能，这通常是待测组件中的一个业务逻辑单元。</p>
+<h3>一：基本流程</h3>
+<p>确定要测试的类或方法：</p>
+<ol>
+<li>写测试类</li>
+<li>写测试方法</li>
+<li>运行测试 </li>
+</ol>
+<h3>二：注解方式</h3>
+<p>在你的JUnit测试类中，你可以使用下面的注解，来对你测试代码的片段做特殊处理：</p>
+<p><strong>@Before：</strong>使用此注解来指定一段代码为建立(setup)操作。测试类会在每一个测试方法之前调用此代码块。你可以有多个@Before注解的方法，但测试类调用这些方法的顺序无法保证。</p>
+<p><strong>@After：</strong>使用此注解来指定一段代码为拆除(teardown)操作。测试类会在每一个测试方法之后调用此代码块。同样，你可以在测试代码中定义多个@After操作。使用此注解释放内存资源。</p>
+<p><strong>@Test：</strong>使用此注解来标注测试方法。一个测试类可以包含多个测试方法，都以此注解开头，返回值为void</p>
+<p><strong>@Rule：</strong>Rule能以一种可重用的方式，灵活地添加或重定义每一个测试方法的行为。在Android测试中，此注解是和Android Testing Support Library提供的测试规则类结合起来使用，例如ActivityTestRule或者ServiceTestRule。</p>
+<p><strong>@BeforeClass：</strong>使用此注解标明测试类只会调用一次的静态方法。此步骤对于昂贵的操作(例如连接到数据库)是很有用的。</p>
+<p><strong>@AfterClass：</strong>使用此注解标明，在所有测试方法执行完毕后，会执行一次的静态方法。这一步骤中，应释放在@BeforeClass代码块中分配的资源。</p>
+<p><strong>@Test(timeout=)：</strong>一些注解支持设置参数。例如，你可以为测试方法指定一个超时时间。如果测试没有在指定时间内介绍，它会自动失败。超时时间以毫秒为单位，例如@Test(timeout=5000)。</p>
+<p>执行顺序为：@BeforeClass --&gt; @Before --&gt; @Test --&gt; @After --&gt; @AfterClass</p>
+<p>使用JUnit的断言(Assert)类来验证对象状态的正确性。断言方法会比较你预期的值和测试得到的实际值，如果不符则会抛出异常。Assertion classes描述了这些方法的细节。</p>
+<h3>三：断言方法</h3>
+<p>常用的断言方法：</p>
+<p><strong>assertEquals(args)：</strong>根据传入的参数判断预期结果和实际结果是否相等。</p>
+<p><strong>assertTrue/False(args)：</strong> 判断一个条件为true/false。</p>
+<p><strong>assertNotNull/Null(args)：</strong> 判断一个对象是否为空。</p>
+<p><strong>assertSame/NotSame(args)：</strong> 判断两个对象是否指向同一个对象。</p>
+<p><strong>fail(args)：</strong>  中断测试方法，可以为其设置信息。</p>
+<h3>四：测试示例</h3>
+<p>Android studio 默认支持JUnit，创建一个新的项目，项目中自动添加了JUnit的依赖<code>testCompile 'junit:junit:4.12'</code>，所以可以直接在Android studio中使用JUnit来进行单元测试。</p>
+<h4>本地单元测试</h4>
+<p>运行在本地JVM上的单元测试，主要的测试类在路径<code>src/test</code>下(Project面板视图)。</p>
+<p><strong>第一步：项目中的被测试类：</strong>
+确定一个被测试的类，测试里面的方法运行返回是否符合功能要求，比如在网络请求的时候，测试接口构建是否正确。</p>
+<pre><code>// 要被测试的接口或类
+public interface RetrofitApi {
+
+@GET(&quot;https://api.github.com/users/gqq&quot;)
+Call&lt;ResponseBody&gt; getRequest();
+
+@POST(&quot;/Handler/UserHandler.ashx?action=register&quot;)
+Call&lt;UserResult&gt; getUserRequest(@Body User user);
+}
+</code></pre>
+
+<p><strong>第二步：创建测试类：</strong>
+确定要被测试的类之后，在test路径下创建相应的测试类和测试方法来进行测试，而更快捷的方式在该类上点击右键菜单--&gt; Go To --&gt; Test(ctrl+shift+T快捷键)，自动创建相应的测试类和方法，创建到test路径下</p>
+<img src="http://i.imgur.com/W9HnNxh.png" width = "60%" />
+<p><strong>第三步：完善测试类和方法：</strong></p>
+<p>测试类和测试方法创建完成之后，在相应的方法中完善测试方法：</p>
+<pre><code>public class RetrofitApiTest {
+
+    private RetrofitApi retrofitApi;
+
+    // @Before 在测试方法执行之前被调用
+    @Before
+    public void setUp() throws Exception {
+        retrofitApi = RetrofitClient.getInstance().getRetrofitApi();
+    }
+
+    // 测试方法
+    @Test
+    public void getRequest() throws Exception {
+        ResponseBody body = retrofitApi.getRequest().execute().body();
+        assertNotNull(body);
+    }
+
+    // 测试方法
+    @Test
+    public void getUserRequest() throws Exception {
+        UserResult userResult = retrofitApi.getUserRequest(new User(&quot;123&quot;, &quot;123&quot;)).execute().body();
+        assertEquals(1,userResult.getCode());
+    }
+
+    // 测试完成后执行
+    @After
+    public void tearDown() throws Exception {
+
+    }
+}
+</code></pre>
+
+<p><strong>第四步：执行测试类及结果：</strong>
+右键Run &quot;RetrofitApiTest&quot;执行测试类，查看测试的结果。
+<img src="http://i.imgur.com/H4btZqj.png" /></p>
+<p>通过则显示为<code>OK</code>,未通过展示信息：</p>
+<pre><code>java.lang.AssertionError: 
+Expected :1
+Actual   :2
+</code></pre>
+
+<p>根据测试未通过信息进行修改。以上就是一次本地单元测试过程。</p>
+<h4>Instrumented单元测试</h4>
+<p>虽然在Android框架内支持运行instrumentation测试，但是目前开发重心主要集中在刚刚发布的作为<a href="https://developer.android.com/topic/libraries/testing-support-library/index.html">Android Testing Support Library</a>一部分的新的<a href="https://developer.android.com/topic/libraries/testing-support-library/index.html#AndroidJUnitRunner">AndroidJUnitRunner</a>，测试库包含<a href="https://developer.android.com/topic/libraries/testing-support-library/index.html#Espresso">Espresso</a>，用于运行功能UI测试的框架。</p>
+<p><strong>第一步：添加依赖：</strong>
+在gradle2.2默认添加了对单元测试的支持</p>
+<pre><code>androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    exclude group: 'com.android.support', module: 'support-annotations'
+})
+
+android {
+    defaultConfig {
+        testInstrumentationRunner &quot;android.support.test.runner.AndroidJUnitRunner&quot;
+    }   
+}   
+</code></pre>
+
+<p>所以不再进行依赖的添加。
+没有默认添加依赖的话，需要手动添加以下依赖：</p>
+<pre><code>dependencies {
+    androidTestCompile 'com.android.support.test:runner:0.4'
+    // Set this dependency to use JUnit 4 rules
+    androidTestCompile 'com.android.support.test:rules:0.4'
+    // Set this dependency to build and run Espresso tests
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.1'
+    // Set this dependency to build and run UI Automator tests
+    androidTestCompile 'com.android.support:support-annotations:24.2.0'
+}
+
+
+android {
+    defaultConfig {
+        testInstrumentationRunner &quot;android.support.test.runner.AndroidJUnitRunner&quot;
+    }   
+}   
+</code></pre>
+
+<blockquote>
+<p>具体参见：<a href="https://developer.android.com/topic/libraries/testing-support-library/index.html#setup">Testing Support Library Setup</a></p>
+</blockquote>
+<p><strong>第二步：确定要被测试的具有交互效果的页面：</strong></p>
+<p>例如注册页面，实现输入用户名和密码，点击注册按钮执行业务。</p>
+<pre><code>@Bind(R.id.et_Username)
+EditText etUsername;
+@Bind(R.id.et_Passrword)
+EditText etPassrword;
+
+@OnClick(R.id.btn_Register)
+public void onClick() {
+    // 执行业务
+}
+</code></pre>
+
+<p><strong>第三步：创建测试类和测试方法：</strong>
+在要被测试的类中点击右键菜单--&gt; Go To --&gt; Test(ctrl+shift+T快捷键)，自动创建相应的测试类和方法，创建到androidTest路径下。</p>
+<p><strong>第四步：完善测试类和测试方法:</strong></p>
+<pre><code>import static android.support.test.espresso.Espresso.onView;
+import static android.support.test.espresso.action.ViewActions.click;
+import static android.support.test.espresso.action.ViewActions.typeText;
+import static android.support.test.espresso.matcher.ViewMatchers.withId;
+
+public class RetrofitPostActivityInstrumentedTest {
+
+    @Rule
+    public ActivityTestRule&lt;RetrofitPostActivity&gt; activityTestRule = new ActivityTestRule&lt;RetrofitPostActivity&gt;(RetrofitPostActivity.class);
+
+    @Test
+    public void onClick() throws Exception {
+
+        onView(withId(R.id.et_Username)).perform(typeText(&quot;123456&quot;));// 为id为et_Username的控件输入字符串“123456”
+
+        onView(withId(R.id.et_Passrword)).perform(typeText(&quot;123456&quot;));// 为id为et_Passrword的控件输入字符串“123456”
+
+        onView(withId(R.id.btn_Register)).perform(click());// 为id为btn_Register的控件设置点击事件
+
+        Thread.sleep(3000);// 因为注册为网络请求(耗时操作)，所以线程休眠以等待结果。
+    }
+}
+</code></pre>
+
+<p>关于视图的操作方法由Espresso进行，更多API参考<a href="https://developer.android.com/topic/libraries/testing-support-library/index.html#Espresso">Espresso</a></p>
+<p><strong>第五步：执行测试</strong></p>
+<p>右键Run &quot;RetrofitPostActivityInstrumentedTest&quot;执行测试类，查看测试。
+至此，测试过程结束。</p>
+<blockquote>
+<p>更多的资料请查看：<a href="https://developer.android.com/topic/libraries/testing-support-library/index.html">Testing Support Library</a></p>
+</blockquote>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

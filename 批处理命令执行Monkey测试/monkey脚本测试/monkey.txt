@@ -1,0 +1,23 @@
+#头文件、控制monkey发送消息的参数
+type=user
+count=10
+speed=1.0
+#以下为monkey命令
+start data >>
+LaunchActivity(com.feicuiedu.monkeydemo,com.feicuiedu.monkeydemo.TestActivity)
+Tap(500,300)
+DispatchString(123456)
+Tap(300,400)
+UserWait(1000)
+Tap(200,1100)
+UserWait(1000)
+Tap(150,400)
+UserWait(1000)
+Tap(500,300)
+DispatchString(abc)
+Tap(300,400)
+UserWait(1000)
+Tap(200,1100)
+UserWait(1000)
+Tap(150,400)
+

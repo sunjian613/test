@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Monkey使用</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1>Monkey测试</h1>
+<blockquote>
+<p>索引</p>
+<ul>
+<li><a href="#1">Monkey的介绍</a></li>
+<li><a href="#2">Monkey基本使用</a></li>
+<li><a href="#3">Monkey命令参考</a></li>
+<li>
+<a href="#4">Monkey测试信息截取</a>
+<ul>
+<li><a href="#4.1">CRASH</a></li>
+<li><a href="#4.2">ANR</a></li>
+</ul>
+</li>
+<li>
+<a href="#5">MonkeyScript</a>
+<ul>
+<li><a href="#5.1">脚本格式</a></li>
+<li><a href="#5.2">常用API</a></li>
+<li><a href="#5.3">简单案例</a></li>
+</ul>
+</li>
+<li><a href="#6">Monkey案例实践</a></li>
+</ul>
+</blockquote>
+<h2 id="1">Monkey的介绍</h2>
+<p>Monkey是一个命令行工具，可以运行在模拟器里或实际设备中，使用安卓调试桥(adb)来运行它，向系统发送伪随机的用户事件流，实现对正在开发的应用程序进行压力测试，可以根据获取的log信息进行修复。</p>
+<h2 id="2">Monkey的基本使用</h2>
+<blockquote>
+<ol>
+<li>连接设备：adb devices 查看设备是否连接成功</li>
+<li>adb shell 进入shell界面</li>
+<li>设备安装要运行的程序包或apk（或者通过查看data/data下的程序包)：adb安装apk：在所安装的apk路径下，使用adb install **.apk</li>
+<li>执行monkey测试命令：monkey -p your.package.name -v 500</li>
+</ol>
+<p>测试信息说明：</p>
+</blockquote>
+<p>随机事件的百分比：
+0：触摸事件百分比，即参数--pct-touch</p>
+<p>1：滑动事件百分比，即参数--pct-motion</p>
+<p>2：缩放事件百分比，即参数--pct-pinchzoom</p>
+<p>3：轨迹球事件百分比，即参数--pct-trackball</p>
+<p>4：屏幕旋转事件百分比，</p>
+<p>5：基本导航事件百分比，即参数--pct-nav</p>
+<p>6：主要导航事件百分比，即参数--pct-majornav</p>
+<p>7：系统事件百分比，即参数--pct-syskeys</p>
+<p>8：Activity启动事件百分比，即参数--pct-appswitch</p>
+<p>9：键盘翻转事件百分比，即参数--pct-flip</p>
+<p>10：其他事件百分比，即参数--pct-anyevent</p>
+<h2 id="3">Monkey命令使用</h2>
+<pre><code>-help   列出简单用法
+
+-v      作用：命令行上的每一个-v都将增加反馈信息的详细级别。
+Level0（默认），除了启动、测试完成和最终结果外只提供较少的信息。
+Level1，提供了较为详细的测试信息，如逐个发送到Activity的事件信息。
+Level2，提供了更多的设置信息，如测试中选中或未选中的Activity信息。
+例：
+adb shell monkey -v 10
+adb shell monkey -v -v 10
+adb shell monkey -v -v -v 10
+
+-s &lt;seed&gt;
+作用：伪随机数生成器的seed值。如果用相同的seed值再次运行monkey，将生成相同的事件序列。
+例： adb shell monkey -s 12345 -v 10 
+
+--throttle &lt;milliseconds&gt;
+作用：在事件之间插入固定的时间（毫秒）延迟，你可以使用这个设置来减缓Monkey的运行速度，如果你不指定这个参数，则事件之间将没有延迟，事件将以最快的速度生成。
+例： adb shell monkey –throttle 300 -v 10
+注：常用参数，一般设置为300毫秒，原因是实际用户操作的最快300毫秒左右一个动作事件，所以此处一般设置为300毫秒。
+
+-p &lt;allowed-package-name&gt;
+作用：如果你指定一个或多个包，Monkey将只允许访问这些包中的Activity。如果你的应用程序需要访问这些包(如选择联系人)以外的Activity，你需要指定这些包。如果你不指定任何包，Monkey将允许系统启动所有包的Activity。指定多个包，使用多个-p，一个-p后面接一个包名。
+例： adb shell monkey -p com.android.browser -v 10 
+
+--pct-touch &lt;percent&gt;
+作用：调整触摸事件的百分比。（触摸事件是指在屏幕中的一个down-up事件，即在屏幕某处按下并抬起的操作）
+例： adb shell monkey –pct-touch 100 -v 10
+注：常用参数，此参数设置要适应当前被测应用程序的操作，比如一个应用80%的操作都是触摸，那就可以将此参数的百分比设置成相应较高的百分比。
+
+--pct-motion &lt;percent&gt;
+作用：调整motion事件百分比。（motion事件是由屏幕上某处一个down事件、一系列伪随机的移动事件和一个up事件组成）
+例： adb shell monkey –pct-motion 100 -v 10
+注：常用参数，需注意的是移动事件是直线滑动，下面的trackball移动包含曲线移动。
+
+--ignore-crashes
+作用：通常，应用发生崩溃或异常时Monkey会停止运行。如果设置此项，Monkey将继续发送事件给系统，直到事件计数完成。
+
+--ignore-timeouts
+作用：事件请求超时会影响monkey的测试。如果设置此项，Monkey将继续发送事件给系统，直到事件计数完成。
+
+保存测试日志其实很简单，命令如下：
+adb shell monkey -p com.ihongqiqu -v -v -v 500 &gt; monkeytest.txt
+</code></pre>
+
+<h2 id="4">Monkey测试信息</h2>
+<p>在Monkey测试过程中可能会出现程序崩溃(CRASH)和程序无响应的情况(ANR),要将测试的log信息获取到，从而解决bug。</p>
+<h3 id="4.1">CRASH</h3>
+<p>CRASH即崩溃信息，程序在运行中非正常退出。
+不设置忽略crashes，在测试过程中出现CRASH，会中断测试，并显示CRASH信息和seed信息</p>
+<p><img src="http://i.imgur.com/zFGhmGR.png" /></p>
+<p>根据seed值来完成bug的复现：adb shell monkey -p com.feicuiedu.monkeytestdemo -s 1476474162566 -v 1000</p>
+<h3 id="4.2">ANR</h3>
+<p>Applicaton Not Responsing.</p>
+<p>同样在monkey测试过程中，如果出现ANR现象，会输出相应的信息，以ANR开头，获取到信息进行问题的解决，同样可以通过seed来进行复现。</p>
+<p><img src="http://i.imgur.com/zaY7yjX.png" /></p>
+<blockquote>
+<p>附：如果在手动测试过程中出现ANR，日志信息出现在手机中：</p>
+<ol>
+<li>adb shell</li>
+<li>cd /data/anr 切换到设备路径下</li>
+<li>ls 可以看到traces.txt 里面即为log信息</li>
+</ol>
+</blockquote>
+<h2 id="5">MonkeyScript</h2>
+<p>MonkeyScript是monkey的脚本语言，是一组可以被Monkey识别的命令集合，可以帮我们完成一系列的被固定的重复性操作，Monkey通过脚本来进行测试，简单快捷、不需要任何工具，只是一个记事本文件，缺点是在坐标、按键等方面没有逻辑性。</p>
+<h3 id="5.1">脚本格式</h3>
+<pre><code>#头文件、控制monkey发送消息的参数
+type=raw events
+count=10
+speed=1.0
+#以下为monkey命令
+start data &gt;&gt;
+DispatchPress (KEYCODE_HOME)
+DispatchPress (KEYCODE_MENU)
+</code></pre>
+
+<h3 id="5.2">常用API</h3>
+<p>常用API的介绍，其中<code>keycode</code>参考<a href="https://www.gitbook.com/book/xiekui1992/android-keycode/details">keycode列表</a></p>
+<pre><code>LaunchActivity(pkg_name, cl_name): 启动应用的Activity。参数：包名和启动的Activity。
+
+Tap(x, y, tapDuration): 模拟一次手指单击事件。参数：x,y为控件坐标，tapDuration为点击的持续时间，此参数可省略。
+
+DispatchPress(keyName): 按键。参数： keycode
+
+RotateScreen(rotationDegree, persist): 旋转屏幕。 参数：rotationDegree为旋转角度， e.g. 1代表90度；persist表示旋转之后是否固定，0表示旋转后恢复，非0则表示固定不变。
+
+DispatchFlip(true/false): 打开或者关闭软键盘。
+
+LongPress():  长按2秒。
+
+PressAndHold(x, y, pressDuration):  模拟长按事件。
+
+DispatchString(input):  输入字符串。
+
+Drag(xStart, yStart, xEnd, yEnd, stepCount):  用于模拟一个拖拽操作。
+
+PinchZoom(x1Start, y1Start, x1End, y1End, x2Start, y2Start, x2End, y2End, stepCount): 模拟缩放手势。
+
+UserWait(sleepTime): 休眠一段时间
+
+DeviceWakeUp(): 唤醒屏幕。
+
+PowerLog(power_log_type, test_case_status): 模拟电池电量信息。
+
+WriteLog(): 将电池信息写入sd卡。
+
+RunCmd(cmd): 运行shell命令。
+
+DispatchPointer(downtime,eventTime,action,x,yxpressure,size,metastate,xPrecision,yPrecision,device,edgeFlags)：向指定位置，发送单个手势。
+
+DispatchPointer(downtime,eventTime,action,x,yxpressure,size,metastate,xPrecision,yPrecision,device,edgeFilags)：发送按键消息。
+
+LaunchInstrumentation(test_name,runner_name): 运行一个instrumentation测试用例。
+
+DispatchTrackball: 模拟发送轨迹球事件。
+
+ProfileWait: 等待5秒。
+
+StartCaptureFramerate():  获取帧率。
+
+EndCaptureFramerate(input): 结束获取帧率。
+</code></pre>
+
+<blockquote>
+<p>API方法中控件位置(X,Y轴的坐标)的获取：使用Android提供的工具uiautomatorviewer.bat</p>
+<p>在Android SDK路径下--&gt; tools --&gt; uiautomatorviewer.bat，打开就可以展示设备/模拟器上展示的视图，展示视图结构和坐标。</p>
+</blockquote>
+<p><img src="http://i.imgur.com/ceiPK4h.png" /></p>
+<h3 id="5.3">简单示例</h3>
+<pre><code>#头文件、控制monkey发送消息的参数
+type=raw events
+count=10
+speed=1.0
+#以下为脚本正文
+start data &gt;&gt;
+#1.打开浏览器
+LaunchActivity(com.android.browser,com.android.browser.BrowserActivity)
+ProfileWait()
+#2.清空网址
+Tap(223,146)
+ProfileWait()
+DispatchPress(112)
+ProfileWait()
+#3.输入网址
+DispatchString(www.baidu.com)
+ProfileWait()
+#4.确认，载入网址
+DispatchPress(KEYCODE_ENTER)
+ProfileWait()
+#5.完成退出浏览器
+DispatchPress(KEYCODE_HOME)
+ProfileWait()
+</code></pre>
+
+<blockquote>
+<p>1.脚本完成后将.txt 文件push到手机中</p>
+</blockquote>
+<pre><code>adb push name.txt path
+</code></pre>
+
+<p>其中name是指monkey脚本文件的名称，path是要push到手机上的路径</p>
+<blockquote>
+<p>2.运行Monkey脚本</p>
+</blockquote>
+<pre><code>monkey -f path/name.txt -v 500
+</code></pre>
+
+<p>path是push的路径，name是脚本文件的名称。</p>
+<h2 id="6">案例实践</h2>
+<p>随机事件流对MonketTestDemo进行测试：</p>
+<blockquote>
+<p><strong>1. adb devices 查看设备是否连接</strong></p>
+<p><strong>2. adb shell 进入shell界面</strong></p>
+<p><strong>3. monkey -p com.feicuiedu.monkeytestdemo -v 500 执行monkey命令</strong></p>
+</blockquote>
+<p>一次随机的自动化Monkey测试完成。</p>
+<p><strong>MonkeyScript对MonkeyTestDemo进行测试：</strong></p>
+<blockquote>
+<p><strong>1. 完成monkey.txt脚本的编写，保存到某一路径下</strong></p>
+<p><strong>2. 切换到monkey.txt路径下</strong></p>
+<p><strong>3. adb push monkey.txt /data/local/temp/(设备的任一路径，无确切规定)</strong></p>
+<p><strong>4. adb shell 切换到设备下</strong></p>
+<p><strong>5. cd /data/local/temp 切换到monkey.txt路径下</strong></p>
+<p><strong>6. monkey -f monkey.txt -v 10 执行monkey脚本及执行次数</strong></p>
+<p>一次MonkeyScript的自动化Monkey测试完成。</p>
+</blockquote>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
